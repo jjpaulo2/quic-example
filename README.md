@@ -33,7 +33,8 @@ make aioquic
 
 ### `fastapi` application example
 
-> [!NOTE] The HTTP/3 isn't a FastAPI feature, but a [hypercorn](https://pgjones.gitlab.io/hypercorn/) feature.
+> [!NOTE]
+> The HTTP/3 isn't a FastAPI feature, but a [hypercorn](https://pgjones.gitlab.io/hypercorn/) feature.
 
 You can found a simple FastAPI application in [`examples/fastapi/server.py`](./examples/fastapi/server.py). To run it using [hypercorn](https://hypercorn.readthedocs.io/en/latest/), you can use make, as below.
 
