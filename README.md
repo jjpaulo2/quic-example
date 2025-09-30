@@ -31,12 +31,14 @@ You can found a simple aioquic server in [`examples/aioquic/server.py`](./exampl
 make aioquic
 ```
 
-### `quart` application example
+### `fastapi` application example
 
-You can found a simple Quart application in [`examples/quart/server.py`](./examples/quart/server.py). To run it, you can use make, as below.
+> [!NOTE] The HTTP/3 isn't a FastAPI feature, but a [hypercorn](https://pgjones.gitlab.io/hypercorn/) feature.
+
+You can found a simple FastAPI application in [`examples/fastapi/server.py`](./examples/fastapi/server.py). To run it using [hypercorn](https://hypercorn.readthedocs.io/en/latest/), you can use make, as below.
 
 ```bash
-make quart
+make fastapi
 ```
 
 ### `curl` for testing the server

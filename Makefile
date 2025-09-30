@@ -1,5 +1,5 @@
 QUIC_PORT=4433
-QUIC_HOST=localhost
+QUIC_HOST=127.0.0.1
 
 CERT_FILE=cert/cert.pem
 KEY_FILE=cert/key.pem
@@ -12,8 +12,8 @@ cert:
 aioquic: cert
 	python examples/aioquic/server.py
 
-quart: cert
-	hypercorn --quic-bind $(QUIC_HOST):$(QUIC_PORT) --certfile $(CERT_FILE) --keyfile $(KEY_FILE) examples.quart.server:app
+fastapi: cert
+	hypercorn --quic-bind $(QUIC_HOST):$(QUIC_PORT) --certfile $(CERT_FILE) --keyfile $(KEY_FILE) examples.fastapi.server:app
 
 test:
 	docker run --network=host --rm ymuski/curl-http3 curl --http3 --insecure --silent https://$(QUIC_HOST):$(QUIC_PORT)/hello
