@@ -1,6 +1,6 @@
 # Python QUIC example
 
-This project demonstrates a basic QUIC server and client implementation in Python using [aioquic](https://aioquic.readthedocs.io/en/latest/) and [Quart](https://quart.palletsprojects.com/en/latest/).
+This project demonstrates a basic QUIC server and client implementation in Python using [aioquic](https://aioquic.readthedocs.io/en/latest/) and [hypercorn](https://hypercorn.readthedocs.io/en/latest/) (running a FastAPI application).
 
 ## Prerequisites
 
