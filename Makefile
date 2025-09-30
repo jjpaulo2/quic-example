@@ -17,3 +17,7 @@ quart: cert
 
 test:
 	docker run --network=host --rm ymuski/curl-http3 curl --http3 --insecure --silent https://$(QUIC_HOST):$(QUIC_PORT)/hello
+
+test-verbose:
+	docker run --network=host --rm ymuski/curl-http3 curl --http3 --insecure --silent -vvv https://$(QUIC_HOST):$(QUIC_PORT)/hello
+	
